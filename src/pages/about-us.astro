@@ -1,0 +1,47 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Logo from '../assets/web/3-4.png'
+import MSlade from '../assets/matt-slade.jpeg'
+---
+
+<Layout title="Slade Integrative Health | About Us">
+	<main>
+		<div class="container max-w-screen-xl mx-auto px-4 md:px-2">
+			<div class="flex flex-col md:flex-row py-28">
+				<div class="w-full md:w-1/2 flex">
+					<img src={Logo} alt="" class="w-4/5 m-auto">
+				</div>
+				<div class=" md:w-1/2 flex">
+					<div class="my-auto">
+						<h2 class="text-center md:text-left text-5xl font-extrabold mb-4 text-[#2D1505]">Mission</h2>
+						<hr class="mb-4 border-[#2D1505]">
+						<p class="text-base text-center md:text-left text-[#2D1505] mb-4">
+							The mission of Slade Integrative Health Alliance is to offer compassionate, integrative psychotherapy that supports individuals in overcoming mental health challenges. We create a welcoming, inclusive environment where clients from all backgrounds, identities, and experiences feel safe, respected, and heard. By combining evidence-based practices with a deep respect for each person’s unique journey, we empower individuals to heal, grow, and thrive. Our commitment to diversity and equity ensures that everyone receives personalized, culturally attuned care that fosters emotional well-being, resilience, and lasting transformation.
+						</p>
+					</div>
+				</div>
+			</div>
+
+			<div class="flex flex-col-reverse md:flex-row py-28 ">
+				<div class=" md:w-1/2 flex">
+					<div class="my-auto">
+						<h2 class="text-center md:text-left text-5xl font-extrabold mb-4 text-[#2D1505]">Matthew Slade, LCSW-C</h2>
+						<hr class="mb-4 border-[#2D1505]">
+						<p class="text-base text-center md:text-left text-[#2D1505] mb-4">
+							During his time as an intern in 2010, Matthew served populations surviving substance use disorders and dual diagnoses. In 2014, Matthew transitioned to an Outpatient Mental Health Clinic setting specializing in individual and family therapy with complex mental health diagnoses such as Mood Disorders, Psychotic Disorders, Substance Use Disorders, ADHD, Anger Management, Trauma, Relationship Dynamics, and Grief and Loss.
+						</p>
+						<p class="text-base text-center md:text-left text-[#2D1505]">
+							Matthew uses an integrative approach in his psychotherapy practice, providing individualized care to ensure that his clients tap into their fullest potential and leave each session with a better understanding of how to manage their unique struggles and mental health concerns. Matthew aims to create a safe space to unpack existing trauma and integrate new tools for managing mental health issues in your everyday life.
+						</p>
+					</div>
+				</div>
+				<div class="w-full md:w-1/2 flex mb-8 md:mb-0">
+					<img src={MSlade} alt="" class="w-2/3 m-auto rounded-full">
+				</div>
+			</div>
+		</div>
+	</main>
+</Layout>
+
+<script>
+</script>
