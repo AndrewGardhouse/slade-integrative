@@ -1,4 +1,5 @@
 ---
+import { Image } from '@astrojs/image/components';
 import Layout from '../layouts/Layout.astro';
 import Logo from '../assets/web/3-4.png'
 ---
@@ -8,14 +9,14 @@ import Logo from '../assets/web/3-4.png'
 		<div class="container max-w-screen-xl mx-auto px-4 md:px-2">
 			<div class="flex flex-col md:flex-row pt-28">
 				<div class="w-full md:w-1/2 flex">
-					<img src={Logo} alt="" class="w-4/5 m-auto">
+					<Image src={Logo} alt="" class="w-4/5 m-auto">
 				</div>
 				<div class=" md:w-1/2 flex">
 					<div class="my-auto">
 						<h1 class="text-center md:text-left text-4xl font-extrabold mb-4 text-[#2D1505]">Slade Integrative Health Alliance</h1>
 						<hr class="mb-4 border-[#2D1505]">
 						<p class="text-base text-center md:text-left text-[#2D1505]">
-							Compassionate, integrative psychotherapy that supports individuals in overcoming mental health challenges
+							Compassionate, integrative psychotherapy that supports individuals in overcoming mental health challenges.
 						</p>
 					</div>
 				</div>
