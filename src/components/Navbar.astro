@@ -1,33 +1,33 @@
 ---
 import { Image } from '@astrojs/image/components';
-import Logo from '../assets/web/3-4 copy 7.png'
+import Logo from '../assets/svg/3-4 copy 2.svg'
 ---
 
-<nav class="bg-[#306376] sticky top-0">
+<nav class="bg-white border-b border-[#C5D8DE] sticky top-0">
   <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
     <a href="/" class="flex items-center space-x-3 rtl:space-x-reverse">
-        <Image src={Logo} class="h-8 w-8" alt="SIHA Logo" />
-        <span class="self-center md:text-2xl font-semibold whitespace-nowrap text-white">Slade Integrative Health Alliance</span>
+        <Image src={Logo} width={40} height={40} class="h-10 w-10" alt="SIHA Logo" />
+        <span class="self-center md:text-2xl font-semibold whitespace-nowrap text-[#2D1505]">Slade Integrative Health Alliance</span>
     </a>
-    <button data-collapse-toggle="navbar-default" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-default" aria-expanded="false">
+    <button data-collapse-toggle="navbar-default" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-[#2D1505] rounded-lg md:hidden focus:outline-none focus:ring-2 focus:ring-[#2D1505]/20 hover:bg-[#F8F7F5] transition-colors duration-200" aria-controls="navbar-default" aria-expanded="false">
         <span class="sr-only">Open main menu</span>
         <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
-            <path stroke="white" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"/>
+            <path stroke="#2D1505" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"/>
         </svg>
     </button>
     <div class="hidden w-full md:block md:w-auto" id="navbar-default">
-      <ul class="font-medium flex flex-col p-4 md:p-0 mt-4 border  rounded-lg md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0">
+      <ul class="font-medium flex flex-col md:p-0 mt-4 md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0">
         <li>
-          <a href="/about-us" class="block font-semibold py-2 px-3 text-white rounded hover:text-[#306376] md:hover:text-white hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">About Us</a>
+          <a href="/about-us" class="block font-semibold py-2 px-3 text-[#2D1505] rounded hover:text-[#2D1505]/70 hover:bg-[#F8F7F5] md:hover:bg-transparent md:border-0 md:p-0 transition-colors duration-200">About Us</a>
         </li>
         <!-- <li>
-          <a href="#" class="block font-semibold py-2 px-3 text-white rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Services</a>
+          <a href="#" class="block font-semibold py-2 px-3 text-[#2D1505] rounded hover:text-[#2D1505]/70 hover:bg-[#F8F7F5] md:hover:bg-transparent md:border-0 md:p-0 transition-colors duration-200">Services</a>
         </li>
         <li>
-          <a href="#" class="block font-semibold py-2 px-3 text-white rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Fees and Insurance</a>
+          <a href="#" class="block font-semibold py-2 px-3 text-[#2D1505] rounded hover:text-[#2D1505]/70 hover:bg-[#F8F7F5] md:hover:bg-transparent md:border-0 md:p-0 transition-colors duration-200">Fees and Insurance</a>
         </li> -->
         <li>
-          <a href="/contact" class="block font-semibold py-2 px-3 text-white rounded hover:text-[#306376] md:hover:text-white hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Contact</a>
+          <a href="/contact" class="block font-semibold py-2 px-3 text-[#2D1505] rounded hover:text-[#2D1505]/70 hover:bg-[#F8F7F5] md:hover:bg-transparent md:border-0 md:p-0 transition-colors duration-200">Contact</a>
         </li>
       </ul>
     </div>
@@ -37,18 +37,6 @@ import Logo from '../assets/web/3-4 copy 7.png'
 
 <style>
   nav {
-    /* color:#eb781b;
-    color:#cc5221;
-    color:#71250e;
-    color:#6f6534;
-    color:#365365;
-    color:#365365;
-    color:#c9ab93;
-    color:#a67c63;
-    color:#a45a2b;
-    color:#306376;
-    color:#638465; */
-
+    font-family: 'Inter', sans-serif;
   }
 </style>
-  

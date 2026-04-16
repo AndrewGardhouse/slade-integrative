@@ -6,7 +6,7 @@ import MSlade from '../assets/matt-slade.jpeg'
 ---
 
 <Layout title="Slade Integrative Health | About Us">
-	<main>
+	<main class="animate-text">
 		<div class="container max-w-screen-xl mx-auto px-4 md:px-2">
 			<div class="flex flex-col md:flex-row pt-28 pb-20">
 				<div class="w-full md:w-1/2 flex">
@@ -15,9 +15,9 @@ import MSlade from '../assets/matt-slade.jpeg'
 				<div class=" md:w-1/2 flex">
 					<div class="my-auto">
 						<h2 class="text-center md:text-left text-5xl font-extrabold mb-4 text-[#2D1505]">Mission</h2>
-						<hr class="mb-4 border-[#2D1505]">
-						<p class="text-base text-center md:text-left text-[#2D1505] mb-4">
-							The mission of Slade Integrative Health Alliance is to offer compassionate, integrative psychotherapy that supports individuals in overcoming mental health challenges. We create a welcoming, inclusive environment where clients from all backgrounds, identities, and experiences feel safe, respected, and heard. By combining evidence-based practices with a deep respect for each person’s unique journey, we empower individuals to heal, grow, and thrive. Our commitment to diversity and equity ensures that everyone receives personalized, culturally attuned care that fosters emotional well-being, resilience, and lasting transformation.
+						<hr class="mb-4 border-[#C5D8DE]">
+						<p class="text-base text-center md:text-left text-[#365365] mb-4">
+							The mission of Slade Integrative Health Alliance is to offer compassionate, integrative psychotherapy that supports individuals in overcoming mental health challenges. We create a welcoming, inclusive environment where clients from all backgrounds, identities, and experiences feel safe, respected, and heard. By combining evidence-based practices with a deep respect for each person's unique journey, we empower individuals to heal, grow, and thrive. Our commitment to diversity and equity ensures that everyone receives personalized, culturally attuned care that fosters emotional well-being, resilience, and lasting transformation.
 						</p>
 					</div>
 				</div>
@@ -27,11 +27,11 @@ import MSlade from '../assets/matt-slade.jpeg'
 				<div class=" md:w-1/2 flex">
 					<div class="my-auto">
 						<h2 class="text-center md:text-left text-5xl font-extrabold mb-4 text-[#2D1505]">Matthew Slade, LCSW-C</h2>
-						<hr class="mb-4 border-[#2D1505]">
-						<p class="text-base text-center md:text-left text-[#2D1505] mb-4">
+						<hr class="mb-4 border-[#C5D8DE]">
+						<p class="text-base text-center md:text-left text-[#365365] mb-4">
 							During his time as an intern in 2010, Matthew served populations surviving substance use disorders and dual diagnoses. In 2014, Matthew transitioned to an Outpatient Mental Health Clinic setting specializing in individual and family therapy with complex mental health diagnoses such as Mood Disorders, Psychotic Disorders, Substance Use Disorders, ADHD, Anger Management, Trauma, Relationship Dynamics, and Grief and Loss.
 						</p>
-						<p class="text-base text-center md:text-left text-[#2D1505]">
+						<p class="text-base text-center md:text-left text-[#365365]">
 							Matthew uses an integrative approach in his psychotherapy practice, providing individualized care to ensure that his clients tap into their fullest potential and leave each session with a better understanding of how to manage their unique struggles and mental health concerns. Matthew aims to create a safe space to unpack existing trauma and integrate new tools for managing mental health issues in your everyday life.
 						</p>
 					</div>
@@ -44,5 +44,31 @@ import MSlade from '../assets/matt-slade.jpeg'
 	</main>
 </Layout>
 
+<style>
+	:global(.animate-text h1),
+	:global(.animate-text h2),
+	:global(.animate-text h3),
+	:global(.animate-text p) {
+		opacity: 0;
+		transition: opacity 0.8s ease;
+	}
+	:global(.animate-text h1.visible),
+	:global(.animate-text h2.visible),
+	:global(.animate-text h3.visible),
+	:global(.animate-text p.visible) {
+		opacity: 1;
+	}
+</style>
 <script>
+	document.addEventListener('DOMContentLoaded', () => {
+		const observer = new IntersectionObserver((entries) => {
+			entries.forEach((entry, i) => {
+				if (entry.isIntersecting) {
+					setTimeout(() => entry.target.classList.add('visible'), i * 60);
+					observer.unobserve(entry.target);
+				}
+			});
+		}, { threshold: 0.1 });
+		document.querySelectorAll('.animate-text h1, .animate-text h2, .animate-text h3, .animate-text p').forEach(el => observer.observe(el));
+	});
 </script>

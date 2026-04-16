@@ -13,19 +13,20 @@ const { title } = Astro.props;
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<link rel="icon" type="image/png" href="/favicon.png" />
+		<link rel="apple-touch-icon" href="/favicon.png" />
 		<meta name="generator" content={Astro.generator} />
 		<link rel="preconnect" href="https://fonts.googleapis.com">
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-		<link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Sen:wght@400..800&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 		<title>{title}</title>
 	</head>
-	<body class="text-gradient bg-amber-50">
+	<body class="bg-[#F8F7F5] min-h-screen flex flex-col">
 		<Navbar/>
 		<slot />
-		<footer class="border border-t border-b-0 py-2">
+		<footer class="border-t border-[#C5D8DE] py-2">
 			<div class="container max-w-screen-xl mx-auto px-4 md:px-2">
-				<small>© Copyright 2025 | Slade Integrative Health Alliance | All rights reserved</small>
+				<small class="text-[#365365]">© Copyright {new Date().getFullYear()} | Slade Integrative Health Alliance | All rights reserved</small>
 			</div>
 		</footer>
 		<script is:inline src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.3/flowbite.min.js"></script>
@@ -33,6 +34,26 @@ const { title } = Astro.props;
 </html>
 <style is:global>
 	html {
-		font-family: "Raleway", serif;
+		font-family: "Inter", sans-serif;
+		overscroll-behavior: none;
+	}
+	img {
+		opacity: 0;
+		transition: opacity 0.4s ease;
+	}
+	img.loaded {
+		opacity: 1;
 	}
 </style>
+<script is:inline>
+	document.addEventListener('DOMContentLoaded', () => {
+		document.querySelectorAll('img').forEach(img => {
+			if (img.complete) {
+				img.classList.add('loaded');
+			} else {
+				img.addEventListener('load', () => img.classList.add('loaded'));
+			}
+		});
+
+	});
+</script>
